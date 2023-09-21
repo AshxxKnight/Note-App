@@ -1,0 +1,112 @@
+.form-container {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    z-index: 1;
+    width: 50%;
+    margin: auto;
+  }
+  
+  .form-horizontal {
+    background-color: #a7adad;
+    padding: 30px 30px 10px;
+    border: 1px solid #e7e7e7;
+  }
+  
+  .form-container .form-horizontal:before,
+  .form-container .form-horizontal:after {
+    content: '';
+    background-color: #d4fafa;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #e7e7e7;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+  
+  .form-horizontal .form-group {
+    background-color: #eaeaea;
+    margin: 0 0 15px;
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+  }
+  
+  .input-icon {
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    line-height: 40px;
+    height: 40px;
+    width: 40px;
+    vertical-align: top;
+    display: inline-block;
+  }
+  
+  .form-control {
+    color: #555;
+    background-color: transparent;
+    font-size: 14px;
+    letter-spacing: 1px;
+    width: calc(100% - 55px);
+    height: 40px;
+    padding: 2px 10px 2px 0;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    display: inline-block;
+    transition: all 0.3s;
+  }
+  
+  .form-control:focus {
+    box-shadow: none;
+    border: none;
+  }
+  
+  .form-control::placeholder {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 14px;
+    text-transform: capitalize;
+  }
+  
+  .btn {
+    color: #000;
+    background: #7a7f7e;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
+    width: 100px;
+    padding: 5px 18px;
+    margin: 0 0 15px 0;
+    border: none;
+    border-radius: 10px;
+    display: inline-block;
+    transition: all 0.3s ease;
+  }
+  
+  .register {
+    font-size: 15px;
+    text-align: right;
+    padding-top: 8px;
+    border-top: 1px solid #e7e7e7;
+    display: block;
+  }
+  
+  .form-horizontal .btn:hover,
+  .form-horizontal .btn:focus {
+    color: #414c4d;
+    letter-spacing: 2px;
+  }
+  
+  .form-horizontal .register a {
+    color: #b0abab;
+    transition: all 0.3s ease;
+  }
+  
+  .form-horizontal .register a:hover {
+    color: #000;
+    text-decoration: underline;
+  }
+  .side-right{
+    float:right;
+  }

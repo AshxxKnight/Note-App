@@ -1,0 +1,40 @@
+<div>
+    <p>
+        <mat-toolbar>
+          <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon>menu</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item routerLink="/add">
+              <mat-icon>add</mat-icon>
+              <span>Add Note</span>
+            </button>
+          </mat-menu>
+        <span>My Notes</span>
+        <span class="nav-space"></span>
+        <button mat-icon-button (click)="logout()">
+          <mat-icon>logout</mat-icon>
+        </button>
+      </mat-toolbar>
+      </p>
+      
+</div>
+<div class="ms-5" *ngFor="let note of notes">
+<mat-card class="size-card">
+    <mat-card-header>
+      <mat-card-title>{{note.title}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <br>
+      <p>{{note.content}}<br><br><br></p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button class= "ms-2 me-3" mat-mini-fab color="secondary" (click)="deleteNote(note.id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+          <button mat-mini-fab color="secondary" routerLink="/edit/{{note.id}}">
+            <mat-icon>edit</mat-icon>
+          </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

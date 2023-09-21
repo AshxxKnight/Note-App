@@ -1,0 +1,38 @@
+<div class="form-bg">
+    <div class="container xxl mt-5">
+
+        <div class="row">
+            <div class=" fixed-header mt-5">
+        
+                <div class="form-container">
+                    <form [formGroup]="Login" (ngSubmit)="login()" class="form-horizontal " >
+                        <h2 class="title pt-2 pb-2">Login Form</h2>
+                        <div class="side-right">
+                        <button class="btn signin" routerLink="">Back</button>
+                        </div>
+                        <!-- <label style="color: red;">WRONG CREDENTIALS</label> -->
+                        <br/>
+
+                        <label class="input-icon">Email:</label>
+                        <div class="form-group">
+                            <input class="form-control" type="text"  id="email" name="email" formControlName="email" >
+                        </div>
+
+                        <label class="input-icon">Password:</label>
+                        <!-- <span class="error" *ngIf="email?.invalid && email?.touched">Email is required</span> -->
+                        <div class="form-group">
+                            <input class="form-control" type="password" id="password" name="password" formControlName="password">
+                        </div>
+                        <!-- <span class="error" *ngIf="password?.invalid && password?.touched">Password is required</span>
+                        <br/> -->
+                        <button type="submit" class="btn me-2" [disabled]="!this.Login.valid">Log In</button>
+                        <button class=" btn me-5" type="reset">Clear</button>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
